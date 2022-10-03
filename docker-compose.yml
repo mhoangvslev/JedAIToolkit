@@ -1,0 +1,11 @@
+version: '3'
+services:
+  jedai:
+    container_name: jedai
+    image: "gmandi/jedai-webapp:latest"
+    environment:
+      - JAVA_OPTIONS=-Xmx8g
+    volumes:
+      - "./data:/tmp/"
+    ports:
+       - "8080:8080"
